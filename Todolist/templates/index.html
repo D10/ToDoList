@@ -14,10 +14,10 @@
 <div class="todo">
     {% for item in todo %}
 
-        <div class="card text-white {{ item.get_priority}} mb-3" style="max-width: 22rem;">
+        <div class="card text-white {{ item.priority.color}} mb-3" style="max-width: 22rem;">
             <div class="card-header">Выполнить до: {{ item.will_end }}</div>
             <div class="card-body">
-                <h5 class="card-title">{{ item.name }}   <li class="{{ item.get_status }}" title="{{ item.status }}"></li></h5>
+                <h5 class="card-title">{{ item.name }} <li class="{{ item.status.icon }}" title="{{ item.status }}"></li></h5>
                 <p class="card-text">{{ item.description }}</p>
                 <p class="card-text">Время старта: {{ item.created_at }}</p>
             </div>

@@ -41,9 +41,3 @@ class ToDo(models.Model):
         verbose_name = 'Задача'
         verbose_name_plural = 'Задачи'
         ordering = ['-created_at']
-
-    def get_priority(self):
-        return Priority.objects.get(name=self.priority).color
-
-    def get_status(self):
-        return Status.objects.get(name=self.status).icon
